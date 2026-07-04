@@ -565,11 +565,11 @@
         GM_addStyle(`
             :root {
                 --mx-primary: #1d9bf0;
-                --mx-glass-bg: rgba(255, 255, 255, 0.7);
-                --mx-glass-border: rgba(0, 0, 0, 0.1);
+                --mx-glass-bg: rgba(255, 255, 255, 0.96);
+                --mx-glass-border: rgba(0, 0, 0, 0.18);
                 --mx-text: #0f1419;
                 --mx-text-dim: #536471;
-                --mx-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                --mx-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
                 --mx-blur: none;
             }
 
@@ -577,13 +577,13 @@
             [style*="background-color: rgb(21, 32, 43)"], /* Dim */
             [style*="background-color: rgb(0, 0, 0)"],    /* Lights out */
             body.dark-mode {
-                --mx-glass-bg: rgba(21, 32, 43, 0.75);
-                --mx-glass-border: rgba(255, 255, 255, 0.1);
+                --mx-glass-bg: rgba(21, 32, 43, 0.88);
+                --mx-glass-border: rgba(255, 255, 255, 0.16);
                 --mx-text: #f7f9f9;
                 --mx-text-dim: #8b98a5;
             }
             [style*="background-color: rgb(0, 0, 0)"] {
-                --mx-glass-bg: rgba(0, 0, 0, 0.75);
+                --mx-glass-bg: rgba(0, 0, 0, 0.88);
             }
 
             @keyframes mx-fade-in {
@@ -636,7 +636,7 @@
             /* Modal & Overlay */
             .twk-note-overlay {
                 position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-                background: rgba(0, 0, 0, 0.3); z-index: 10000;
+                background: rgba(0, 0, 0, 0.42); z-index: 10000;
                 display: flex; align-items: center; justify-content: center;
                 backdrop-filter: none;
                 animation: mx-fade-in 0.2s ease-out;
@@ -647,6 +647,7 @@
                 -webkit-backdrop-filter: var(--mx-blur);
                 border: 1px solid var(--mx-glass-border);
                 border-radius: 20px;
+                outline: 1px solid rgba(255, 255, 255, 0.65);
                 width: 460px; max-width: 90vw;
                 padding: 24px; box-shadow: var(--mx-shadow);
                 position: relative;
@@ -678,11 +679,11 @@
             .twk-note-input {
                 width: 100%; padding: 12px; border-radius: 12px;
                 border: 1px solid var(--mx-glass-border);
-                background: rgba(128, 128, 128, 0.05);
+                background: rgba(128, 128, 128, 0.1);
                 color: inherit; font-size: 14px; box-sizing: border-box;
                 transition: all 0.2s;
             }
-            .twk-note-input:focus { border-color: var(--mx-primary); outline: none; background: rgba(128, 128, 128, 0.1); }
+            .twk-note-input:focus { border-color: var(--mx-primary); outline: none; background: rgba(128, 128, 128, 0.14); }
 
             .twk-note-textarea { min-height: 80px; resize: vertical; }
             .twk-note-tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
@@ -739,6 +740,7 @@
                 -webkit-backdrop-filter: var(--mx-blur);
                 border: 1px solid var(--mx-glass-border);
                 border-radius: 16px;
+                outline: 1px solid rgba(255, 255, 255, 0.65);
                 box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 10001;
                 overflow: hidden;
                 animation: mx-fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
